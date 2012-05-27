@@ -3,8 +3,6 @@ This is the gemified version of https://github.com/jdewit/bootstrap-timepicker
 
 bootstrap-timepicker-rails project integrates Timepicker with Rails 3 assets pipeline.
 
-https://github.com/jdewit/bootstrap-timepicker
-
 ## Rails > 3.1
 Include bootstrap-timepicker-rails in Gemfile;
 
