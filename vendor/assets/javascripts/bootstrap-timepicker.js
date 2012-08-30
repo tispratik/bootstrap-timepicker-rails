@@ -149,6 +149,8 @@
                     this.setValues(defaultTime);
                 }
                 this.update();
+            } else {
+                this.updateFromElementVal();
             }
         }
 
