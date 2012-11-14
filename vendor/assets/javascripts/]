@@ -44,7 +44,9 @@
         this.disableFocus = this.options.disableFocus || this.disableFocus;
         this.template = this.options.template || this.template;
         this.modalBackdrop = this.options.modalBackdrop || this.modalBackdrop;
-        this.defaultTime = this.options.time || this.options.defaultTime || this.defaultTime;
+        this.defaultTime = this.$element.time || this.options.defaultTime || this.defaultTime;
+        console.log(this.$element.time)
+        console.log(this.options)
         this.open = false;
         this.init();
     };
