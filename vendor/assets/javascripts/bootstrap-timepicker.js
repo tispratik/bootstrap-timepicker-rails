@@ -432,6 +432,10 @@
         , update: function() {
             this.updateElement();
             this.updateWidget();
+            this.$element.trigger({
+					    type: 'changeTime',
+					    time: this.time
+				    });
         }
 
         , blurElement: function() {
@@ -443,7 +447,7 @@
             var time = this.getTime();
 
             this.$element.val(time).change();
-
+             
             switch (this.highlightedUnit) {
                 case 'hour':
                     this.highlightHour();
