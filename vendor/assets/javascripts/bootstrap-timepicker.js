@@ -434,7 +434,7 @@
             this.updateWidget();
             this.$element.trigger({
 					    type: 'changeTime',
-					    time: this.date
+					    time: this.time
 				    });
         }
 
