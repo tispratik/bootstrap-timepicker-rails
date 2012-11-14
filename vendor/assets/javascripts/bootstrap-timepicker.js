@@ -443,7 +443,10 @@
             var time = this.getTime();
 
             this.$element.val(time).change();
-
+            this.$element.trigger({
+					    type: 'changeTime',
+					    time: this.date
+				    }); 
             switch (this.highlightedUnit) {
                 case 'hour':
                     this.highlightHour();
