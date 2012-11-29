@@ -40,3 +40,20 @@ Just call timepicker() with any selector.
 ```javascript
 $('.timepicker').timepicker()
 ```
+
+Callback for time picked.
+
+```javascript
+$('.timepicker').timepicker()
+    .on('changeTime', function(ev) {
+      alert('time has changed');
+      });
+```
+Set time via data-time attribute.
+
+```html
+<div class='input-append bootstrap-timepicker-component' style='display: inline;'>
+  <input class='dateselect-time input-small' type='text' data-time='12:45 PM'>
+  <span class='add-on'><i class='icon-time'></i></span>
+</div> 
+
