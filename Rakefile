@@ -3,13 +3,10 @@ require File.expand_path('../lib/bootstrap-timepicker-rails/version', __FILE__)
 
 desc "Update assets"
 task 'update' do
-
-  if Dir.exist?('bootstrap-timepicker-src')    
-    system("cd bootstrap-timepicker-src && git pull && cd ..")
-  else
-    system("git clone git://github.com/jdewit/bootstrap-timepicker.git bootstrap-timepicker-src")
-  end
   
+  system("rm -rf bootstrap-timepicker-src")
+  system("git clone git://github.com/jdewit/bootstrap-timepicker.git bootstrap-timepicker-src")
+
   system("cp bootstrap-timepicker-src/css/bootstrap-timepicker.min.css vendor/assets/stylesheets/bootstrap-timepicker.css")
   system("cp bootstrap-timepicker-src/js/bootstrap-timepicker.js vendor/assets/javascripts/bootstrap-timepicker.js")
   system("git status")
